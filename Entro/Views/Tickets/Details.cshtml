@@ -1,0 +1,48 @@
+﻿@model Entro.Models.Tickets
+
+@{ ViewData["Title"] = "Details of Book Concepts"; }
+@{ Layout = "_Layout2"; }
+<br />
+<div>
+    <h4>Details of Book Concepts</h4>
+    <hr />
+    <table class="table table-dark table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Contact)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NumberOfPersons)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Date)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Contact)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.NumberOfPersons)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Date)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" type="button" class="btn btn-warning">Edit</a>
+    <a asp-action="Index" type="button" class="btn btn-warning">Back to List</a>
+</div>

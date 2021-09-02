@@ -1,0 +1,33 @@
+﻿@model Entro.Models.Concepts
+
+@{ ViewData["Title"] = "Create"; }
+@{ Layout = "_Layout2"; }
+<br />
+<h1>Add New Concepts</h1>
+<hr />
+<div class="row">
+    <div class="col-md-12 font-weight-bold">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"> </div>
+            <div class="form-group">
+                <label asp-for="ConceptName" class="control-label"></label>
+                <input asp-for="ConceptName" class="form-control" placeholder="Enter ConceptName" />
+                <span asp-validation-for="ConceptName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Time" class="control-label"></label>
+                <input asp-for="Time" class="form-control" placeholder="Enter Concepts No" />
+                <span asp-validation-for="Time" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TicketRate" class="control-label"></label>
+                <input asp-for="TicketRate" class="form-control" placeholder="Enter TicketRate" />
+                <span asp-validation-for="TicketRate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                <a asp-action="Index" type="button" class="btn btn-secondary">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>

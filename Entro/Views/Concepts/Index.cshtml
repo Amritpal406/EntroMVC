@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Entro.Models.Concepts>
+
+@{ ViewData["Title"] = "Concepts"; }
+
+@{ Layout = "_Layout2"; }
+<p>
+    <a asp-action="Create" type="button" class="btn btn-secondary">Add New Concepts</a>
+</p>
+<table class="table table-dark table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ConceptName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TicketRate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.ConceptName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Time)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TicketRate)
+    </td>
+    <td>
+        <a asp-action="Edit" asp-route-id="@item.Id" type="button" class="btn btn-secondary">Edit</a>
+        <a asp-action="Details" asp-route-id="@item.Id" type="button" class="btn btn-secondary">Details</a>
+        <a asp-action="Delete" asp-route-id="@item.Id" type="button" class="btn btn-secondary">Delete</a>
+    </td>
+</tr>}
+    </tbody>
+</table>
